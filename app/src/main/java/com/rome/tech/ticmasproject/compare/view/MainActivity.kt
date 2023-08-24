@@ -1,4 +1,4 @@
-package com.rome.tech.ticmasproject.view
+package com.rome.tech.ticmasproject.compare.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
