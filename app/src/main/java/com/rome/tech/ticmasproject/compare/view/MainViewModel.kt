@@ -5,34 +5,30 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-import com.rome.tech.ticmasproject.compare.model.Compare
+import com.rome.tech.ticmasproject.compare.model.ComparisonResult
+import com.rome.tech.ticmasproject.compare.model.EvaluateStrings
 
 
 class MainViewModel : ViewModel() {
     // TODO: reemplazar texto estatico por texto de resources
     val result: String = "Debe ingresar ambos valores para comparar"
     private var _result = result
-    val compare: LiveData<Compare> get() = _compare
-    private var _compare = MutableLiveData<Compare>(Compare(_result))
 
-    private fun compare(str1: String, str2: String): String {
-        // TODO: reemplazar texto estatico por texto de resources
-        return when (str1 == str2) {
+    val compare: LiveData<ComparisonResult> get() = _compare
+    private var _compare = MutableLiveData<ComparisonResult>(ComparisonResult(_result))
+
+
+    fun actionCompare(str1: String, str2: String) {
+        // The button has been pressed to compare the EditText
+        _result = if (str1.isNotEmpty() && str2.isNotEmpty()) when (EvaluateStrings(
+            str1, str2
+        ).evaluate()) {
+            // TODO: reemplazar texto estatico por texto de resources
             true -> "Textos ingresados iguales"
             else -> "Textos ingresados diferentes"
         }
-    }
-
-    private fun updateCompare(text: String) {
-        _compare.value = Compare(text)
-
-    }
-
-    fun actionCompare(str1: String, str2: String) {
-        if (str1.isNotEmpty() && str2.isNotEmpty())
-            _result = this.compare(str1, str2)
         else {
-            _result = result
+            result
         }
 
         updateCompare(_result)
@@ -42,5 +38,20 @@ class MainViewModel : ViewModel() {
         // TODO: llamar a este metodo para resetear valores
         updateCompare(result)
     }
+
+    private fun updateCompare(text: String) {
+        // The observed attribute is updated
+        _compare.value = ComparisonResult(text)
+
+    }
+
+    // Version anterior al refactoreo del codigo
+//    private fun compare(str1: String, str2: String): String {
+//        return when (EvaluateStrings(str1, str2).evaluate()) {
+//            true -> "Textos ingresados iguales"
+//            else -> "Textos ingresados diferentes"
+//        }
+//    }
+
 
 }
