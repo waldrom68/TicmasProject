@@ -5,6 +5,10 @@
     <string name="string1">Ingrese un texto</string>
     <string name="string2">Re-ingrese texto</string>
     <string name="compare">Comparar</string>
+    <string name="reingresar">Reingresar</string>
+    <string name="positiveResult">Textos ingresados iguales</string>
+    <string name="negativeResult">Textos ingresados diferentes</string>
+    <string name="waitingInputs">Debe ingresar ambos valores para comparar</string>
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
