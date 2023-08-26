@@ -1,10 +1,8 @@
 package com.rome.tech.ticmasproject.compare.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.activity.viewModels
-import com.rome.tech.ticmasproject.R
+import androidx.appcompat.app.AppCompatActivity
 import com.rome.tech.ticmasproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,29 +15,30 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Subscribo el seguimiento del atributo "compare" en esta vista
-        mainViewModel.compare.observe(this) {
+        mainViewModel.comparisonResult.observe(this) {
             println("Actualizando UI por cambio en .compare.model")
             binding.result.text = it.result
         }
 
         binding.actionCompare.setOnClickListener {
-            // Obtengo de la UI los valores de los EditText para utilizarlo en el metodo
             // TODO: Texto para el readme - documentation
             // Se compara cadena de caracteres,y no los textos por ello no se utiliza .trim()
             // antes de la comparación.
             // P.ej:
             //      "Hola" == " Hola  " -> False
-            val str1: String = binding.str1.text.toString()
-            val str2: String = binding.str2.text.toString()
 
-            mainViewModel.actionCompare(str1, str2)
+            // Obtengo de la UI los valores de los EditText para utilizarlo en el metodo
+            // TODO: Estos valores los debe levantar el viewModel dentro de la misma accion actionCompare() 'Se deben trasladar sólo las acciones al viewModel'"
+            mainViewModel.actionCompare(
+                binding.str1.text.toString(),
+                binding.str2.text.toString()
+            )
         }
 
-        binding.actionReset.setOnClickListener {
-            // TODO: asignar los valores de los input en blanco
-            mainViewModel.actionReset()
-        }
-
+//        binding.actionReset.setOnClickListener {
+//            // TODO: asignar los valores de los input en blanco
+//            mainViewModel.actionReset()
+//        }
 
     }
 
