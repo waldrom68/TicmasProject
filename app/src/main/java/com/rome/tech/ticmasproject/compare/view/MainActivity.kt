@@ -21,24 +21,19 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.actionCompare.setOnClickListener {
-            // TODO: Texto para el readme - documentation
-            // Se compara cadena de caracteres,y no los textos por ello no se utiliza .trim()
-            // antes de la comparación.
-            // P.ej:
-            //      "Hola" == " Hola  " -> False
-
-            // Obtengo de la UI los valores de los EditText para utilizarlo en el metodo
-            // TODO: Estos valores los debe levantar el viewModel dentro de la misma accion actionCompare() 'Se deben trasladar sólo las acciones al viewModel'"
+            // Obtengo de la UI los valores de los EditText para comparar
             mainViewModel.actionCompare(
                 binding.str1.text.toString(),
                 binding.str2.text.toString()
             )
         }
 
-//        binding.actionReset.setOnClickListener {
-//            // TODO: asignar los valores de los input en blanco
-//            mainViewModel.actionReset()
-//        }
+
+        // TODO: asignar los valores de los input en blanco
+        binding.actionReset.setOnClickListener {
+            binding.str1.text = null
+            binding.str2.text = null
+        }
 
     }
 

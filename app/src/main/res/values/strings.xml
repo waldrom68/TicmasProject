@@ -5,4 +5,8 @@
     <string name="string2">Re-ingrese texto</string>
     <string name="compare">Comparar</string>
     <string name="reingresar">Reingresar</string>
+    <string name="resetResult">"Debe ingresar ambos valores para comparar"</string>
+    <string name="OkResult">"Textos ingresados iguales"</string>
+    <string name="notOkResult">"Textos ingresados diferentes"</string>
+    <string name="app_test">test</string>
 </resources>

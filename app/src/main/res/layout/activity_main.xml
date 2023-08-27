@@ -38,10 +38,11 @@
         <EditText
             android:id="@+id/str1"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
             android:gravity="top"
-            android:hint="@string/string1" />
+            android:hint="@string/string1"
+            android:singleLine="true" />
 
         <Space
             android:layout_width="wrap_content"
@@ -50,10 +51,15 @@
         <EditText
             android:id="@+id/str2"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
             android:gravity="top"
-            android:hint="@string/string2" />
+            android:hint="@string/string2"
+            android:singleLine="true" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="32dp" />
 
         <Button
             android:id="@+id/actionCompare"
@@ -67,6 +73,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/reingresar" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="32dp" />
+
         <TextView
             android:id="@+id/result"
             android:layout_width="wrap_content"
