@@ -14,6 +14,4 @@
     <string name="okResult">"Textos ingresados iguales"</string>
     <string name="notOkResult">"Textos ingresados diferentes"</string>
 
-    <string name="resource_with_args">value 1: %d and value 2: %s </string>
-
 </resources>

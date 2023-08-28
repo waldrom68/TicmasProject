@@ -39,9 +39,9 @@ class MainViewModelUnitTest {
 
     @Test
     fun mainViewModel_CheckInitialValue() = runTest {
-        // TODO reemplazar texto estatico por texto de resources
+        // El metodo devuelve valores tipo indexOf: true -> 1, false -> 0, null -> -1
         viewModel.comparisonResult.value?.result.also {
-            assertEquals("Debe ingresar ambos valores para comparar", it)
+            assertEquals(-1, it)
         }
     }
 
@@ -55,9 +55,9 @@ class MainViewModelUnitTest {
             }
 
             advanceUntilIdle()
-            // TODO reemplazar texto estatico por texto de resources
+            // El metodo devuelve valores tipo indexOf: true -> 1, false -> 0, null -> -1
             viewModel.comparisonResult.value?.result.also {
-                assertEquals("Textos ingresados diferentes", it)
+                assertEquals(0, it)
             }
         }
     }
@@ -72,9 +72,9 @@ class MainViewModelUnitTest {
             }
 
             advanceUntilIdle()
-            // TODO reemplazar texto estatico por texto de resources
+            // El metodo devuelve valores tipo indexOf: true -> 1, false -> 0, null -> -1
             viewModel.comparisonResult.value?.result.also {
-                assertEquals( "Textos ingresados iguales", it )
+                assertEquals( 1, it )
             }
         }
     }
@@ -89,9 +89,9 @@ class MainViewModelUnitTest {
             }
 
             advanceUntilIdle()
-            // TODO reemplazar texto estatico por texto de resources
+            // El metodo devuelve valores tipo indexOf: true -> 1, false -> 0, null -> -1
             viewModel.comparisonResult.value?.result.also {
-                assertEquals("Debe ingresar ambos valores para comparar", it)
+                assertEquals(-1, it)
             }
         }
     }
@@ -104,9 +104,9 @@ class MainViewModelUnitTest {
         }
 
         advanceUntilIdle()
-        // TODO reemplazar texto estatico por texto de resources
+        // El metodo devuelve valores tipo indexOf: true -> 1, false -> 0, null -> -1
         viewModel.comparisonResult.value?.result.also {
-            assertEquals("Debe ingresar ambos valores para comparar", it)
+            assertEquals(-1, it)
         }
     }
 
