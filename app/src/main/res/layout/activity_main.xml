@@ -7,7 +7,6 @@
     tools:context=".compare.view.MainActivity">
 
 
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
@@ -61,18 +60,28 @@
             android:layout_width="wrap_content"
             android:layout_height="32dp" />
 
-        <Button
-            android:id="@+id/actionCompare"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/compare" />
-        <Button
-            android:id="@+id/actionReset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/reingresar" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/actionCompare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16sp"
+                android:text="@string/compare" />
+
+            <Button
+                android:id="@+id/actionReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16sp"
+                android:text="@string/retry" />
+        </LinearLayout>
 
         <Space
             android:layout_width="wrap_content"
@@ -82,12 +91,10 @@
             android:id="@+id/result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
+            android:layout_gravity="center"
+            android:textSize="24sp"
             tools:text="Resultado de la comparación" />
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

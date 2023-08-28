@@ -1,12 +1,19 @@
 <resources>
     <string name="app_name">Ticmas-Project</string>
-    <!-- Strings used for fragments for navigation -->
+
+    <!-- Strings used for form tags -->
     <string name="string1">Ingrese un texto</string>
     <string name="string2">Re-ingrese texto</string>
+
+    <!-- Strings used for action buttons -->
     <string name="compare">Comparar</string>
-    <string name="reingresar">Reingresar</string>
+    <string name="retry">Reintentar</string>
+
+    <!-- Strings used to display the result -->
     <string name="resetResult">"Debe ingresar ambos valores para comparar"</string>
-    <string name="OkResult">"Textos ingresados iguales"</string>
+    <string name="okResult">"Textos ingresados iguales"</string>
     <string name="notOkResult">"Textos ingresados diferentes"</string>
-    <string name="app_test">test</string>
+
+    <string name="resource_with_args">value 1: %d and value 2: %s </string>
+
 </resources>

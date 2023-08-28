@@ -16,8 +16,9 @@ class MainActivity : AppCompatActivity() {
 
         // Subscribo el seguimiento del atributo "compare" en esta vista
         mainViewModel.comparisonResult.observe(this) {
-            println("Actualizando UI por cambio en .compare.model")
+
             binding.result.text = it.result
+
         }
 
         binding.actionCompare.setOnClickListener {
@@ -28,8 +29,6 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
-
-        // TODO: asignar los valores de los input en blanco
         binding.actionReset.setOnClickListener {
             binding.str1.text = null
             binding.str2.text = null

@@ -39,15 +39,14 @@ class MainViewModelUnitTest {
 
     @Test
     fun mainViewModel_CheckInitialValue() = runTest {
+        // TODO reemplazar texto estatico por texto de resources
         viewModel.comparisonResult.value?.result.also {
-            assertEquals(
-                "Debe ingresar ambos valores para comparar", it
-            )
+            assertEquals("Debe ingresar ambos valores para comparar", it)
         }
     }
 
     @Test
-    fun mainViewModel_CheckActionCompareWithDataNegative() = runTest {
+    fun mainViewModel_CheckActionCompareWithDifferentData() = runTest {
         val caseList: List<List<String>> = MockTestData().diferentData()
 
         caseList.forEach {
@@ -56,16 +55,15 @@ class MainViewModelUnitTest {
             }
 
             advanceUntilIdle()
+            // TODO reemplazar texto estatico por texto de resources
             viewModel.comparisonResult.value?.result.also {
-                assertEquals(
-                    "Textos ingresados diferentes", it
-                )
+                assertEquals("Textos ingresados diferentes", it)
             }
         }
     }
 
     @Test
-    fun mainViewModel_CheckActionCompareWithDataPositive() = runTest {
+    fun mainViewModel_CheckActionCompareWithEqualData() = runTest {
         val caseList: List<List<String>> = MockTestData().equalsData()
 
         caseList.forEach {
@@ -74,10 +72,9 @@ class MainViewModelUnitTest {
             }
 
             advanceUntilIdle()
+            // TODO reemplazar texto estatico por texto de resources
             viewModel.comparisonResult.value?.result.also {
-                assertEquals(
-                    "Textos ingresados iguales", it
-                )
+                assertEquals( "Textos ingresados iguales", it )
             }
         }
     }
@@ -92,26 +89,24 @@ class MainViewModelUnitTest {
             }
 
             advanceUntilIdle()
+            // TODO reemplazar texto estatico por texto de resources
             viewModel.comparisonResult.value?.result.also {
-                assertEquals(
-                    "Debe ingresar ambos valores para comparar", it
-                )
+                assertEquals("Debe ingresar ambos valores para comparar", it)
             }
         }
     }
 
     @Test
     fun mainViewModel_CheckActionReset() = runTest {
-        // Outside of this test, the new values assigned to the EditText
+        // Outside of this test, the new values assigned in EditText
         launch {
             viewModel.actionReset()
         }
 
         advanceUntilIdle()
+        // TODO reemplazar texto estatico por texto de resources
         viewModel.comparisonResult.value?.result.also {
-            assertEquals(
-                "Debe ingresar ambos valores para comparar", it
-            )
+            assertEquals("Debe ingresar ambos valores para comparar", it)
         }
     }
 
