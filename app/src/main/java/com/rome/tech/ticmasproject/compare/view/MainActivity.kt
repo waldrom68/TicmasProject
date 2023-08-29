@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
                 0 -> getString(R.string.notOkResult)
                 1 -> getString(R.string.okResult)
                 else -> {
-                    getString(R.string.resetResult)
+                    getString(R.string.resetResult);
                 }
             }
         }
@@ -40,6 +40,8 @@ class MainActivity : AppCompatActivity() {
         binding.actionReset.setOnClickListener {
             binding.str1.text = null
             binding.str2.text = null
+            binding.str1.requestFocus()
+
         }
 
     }
