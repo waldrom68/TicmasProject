@@ -1,6 +1,8 @@
 package com.rome.tech.ticmasproject.compare.view
 
 import android.os.Bundle
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.rome.tech.ticmasproject.R
@@ -25,12 +27,13 @@ class MainActivity : AppCompatActivity() {
                 0 -> getString(R.string.notOkResult)
                 1 -> getString(R.string.okResult)
                 else -> {
-                    getString(R.string.resetResult)
+                    getString(R.string.resetResult);
                 }
             }
         }
 
         binding.actionCompare.setOnClickListener {
+            this.hideVirtualKkeyboard();
             // Obtengo de la UI los valores de los EditText para comparar
             mainViewModel.actionCompare(
                 binding.str1.text.toString(), binding.str2.text.toString()
@@ -40,8 +43,25 @@ class MainActivity : AppCompatActivity() {
         binding.actionReset.setOnClickListener {
             binding.str1.text = null
             binding.str2.text = null
+
+            binding.str1.requestFocus()
+
         }
 
     }
 
+    private fun hideVirtualKkeyboard() {
+        // TODO relocate this code. Maybe in a service
+        // on below line getting current view.
+        val view: View? = this.currentFocus
+        // on below line checking if view is not null.
+        if (view != null) {
+            // on below line we are creating a variable
+            // for input manager and initializing it.
+            val inputMethodManager =
+                getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+            // on below line hiding our keyboard.
+            inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0)
+        }
+    }
 }
