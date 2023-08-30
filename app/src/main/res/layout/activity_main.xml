@@ -72,6 +72,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
+        android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,96 +92,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result"
         app:layout_constraintVertical_bias="0.5" />
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/title"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="36dp"-->
-    <!--        android:layout_marginHorizontal="10dp"-->
-    <!--        android:background="@color/title"-->
-    <!--        android:text="Compara tus textos"-->
-    <!--        android:textColor="@color/black"-->
-    <!--        android:textSize="24sp"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-    <!--        app:layout_constraintVertical_bias="0.02" />-->
-
-    <!--    <com.google.android.material.textfield.TextInputLayout-->
-    <!--        android:id="@+id/filledTextField"-->
-    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="32dp"-->
-    <!--        android:layout_marginTop="64dp"-->
-    <!--        android:layout_marginEnd="32dp"-->
-    <!--        android:hint="@string/string1"-->
-    <!--        app:layout_constraintTop_toTopOf="parent">-->
-    <!--        &lt;!&ndash;this is the actual edit text which takes the input&ndash;&gt;-->
-    <!--        <com.google.android.material.textfield.TextInputEditText-->
-    <!--            android:id="@+id/str1"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content" />-->
-
-    <!--    </com.google.android.material.textfield.TextInputLayout>-->
-
-    <!--    <com.google.android.material.textfield.TextInputLayout-->
-    <!--        android:id="@+id/filledTextField2"-->
-    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="32dp"-->
-    <!--        android:layout_marginTop="16dp"-->
-    <!--        android:layout_marginEnd="32dp"-->
-    <!--        android:hint="@string/string2"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/filledTextField">-->
-    <!--        &lt;!&ndash;this is the actual edit text which takes the input&ndash;&gt;-->
-    <!--        <com.google.android.material.textfield.TextInputEditText-->
-    <!--            android:id="@+id/str2"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content" />-->
-
-    <!--    </com.google.android.material.textfield.TextInputLayout>-->
-
-
-    <!--    <Button-->
-    <!--        android:id="@+id/actionCompare"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="32dp"-->
-    <!--        android:layout_marginTop="8dp"-->
-    <!--        android:layout_marginEnd="32dp"-->
-    <!--        android:text="@string/compare"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/filledTextField2"-->
-    <!--        app:layout_constraintVertical_bias="0.05" />-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/result"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:textSize="24sp"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/actionCompare"-->
-    <!--        app:layout_constraintVertical_bias="0.05"-->
-    <!--        tools:text="Resultado de la comparación" />-->
-
-
-    <!--    <Button-->
-    <!--        android:id="@+id/actionReset"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="32dp"-->
-    <!--        android:layout_marginTop="32dp"-->
-    <!--        android:layout_marginEnd="32dp"-->
-    <!--        android:text="@string/retry"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/result"-->
-    <!--        app:layout_constraintVertical_bias="0.1" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
