@@ -10,7 +10,7 @@
     <string name="retry">Reintentar</string>
 
     <!-- Strings used to display the result -->
-    <string name="resetResult">"Debe ingresar ambos valores para comparar"</string>
+    <string name="resetResult">"Ingrese los textos para comparar"</string>
     <string name="okResult">"Textos ingresados iguales"</string>
     <string name="notOkResult">"Textos ingresados diferentes"</string>
 

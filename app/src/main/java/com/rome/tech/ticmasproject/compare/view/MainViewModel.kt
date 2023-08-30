@@ -11,8 +11,8 @@ import com.rome.tech.ticmasproject.compare.model.EvaluateStrings
 // Business logic
 class MainViewModel : ViewModel() {
 
-    private val result: Int = -1
-    private var _result: Int = result
+//    private val result: Int = -1
+    private var _result: Int = -1
 
     val comparisonResult: LiveData<ComparisonResult> get() = _comparisonResult
     private var _comparisonResult: MutableLiveData<ComparisonResult> =
@@ -34,18 +34,18 @@ class MainViewModel : ViewModel() {
         _result = if (str1.isNotEmpty() && str2.isNotEmpty()) when (EvaluateStrings(
             str1.toString(), str2.toString()
         ).evaluate()) {
-            true -> 1
-            else -> 0
+            true -> 1  // Equal character strings
+            else -> 0  // Different character strings
         }
         else {
-            result
+            -1  // insufficient number of character strings
         }
         updateResult(_result)
     }
 
 
     fun actionReset() {
-        updateResult(result)
+        updateResult(-1)  // Set as insufficient number of character strings
     }
 
 
