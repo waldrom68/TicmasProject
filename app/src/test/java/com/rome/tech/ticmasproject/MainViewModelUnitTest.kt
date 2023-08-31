@@ -96,18 +96,18 @@ class MainViewModelUnitTest {
         }
     }
 
-    @Test
-    fun mainViewModel_CheckActionReset() = runTest {
-        // Outside of this test, the new values assigned in EditText
-        launch {
-            viewModel.actionReset()
-        }
-
-        advanceUntilIdle()
-        // El metodo devuelve valores tipo indexOf: true -> 1, false -> 0, null -> -1
-        viewModel.comparisonResult.value?.result.also {
-            assertEquals(-1, it)
-        }
-    }
+//    @Test
+//    fun mainViewModel_CheckActionReset() = runTest {
+//        // Outside of this test, the new values assigned in EditText
+//        launch {
+//            viewModel.actionReset()
+//        }
+//
+//        advanceUntilIdle()
+//        // El metodo devuelve valores tipo indexOf: true -> 1, false -> 0, null -> -1
+//        viewModel.comparisonResult.value?.result.also {
+//            assertEquals(-1, it)
+//        }
+//    }
 
 }

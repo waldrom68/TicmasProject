@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.rome.tech.ticmasproject.R
 import com.rome.tech.ticmasproject.databinding.ActivityMainBinding
 
+
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val mainViewModel: MainViewModel by viewModels()
@@ -24,31 +25,23 @@ class MainActivity : AppCompatActivity() {
                 Investigar si existe otra forma limpia.
             */
             binding.result.text = when (it.result) {
-                0 -> getString(R.string.notOkResult)
-                1 -> getString(R.string.okResult)
-                else -> {
-                    getString(R.string.resetResult);
-                }
+                0 -> { getString(R.string.notOkResult) }
+                1 -> { getString(R.string.okResult) }
+                else -> { getString(R.string.resetResult) }
             }
-        }
-
-        binding.actionCompare.setOnClickListener {
             this.hideVirtualKkeyboard();
-            // Obtengo de la UI los valores de los EditText para comparar
-            mainViewModel.actionCompare(
-                binding.str1.text.toString(), binding.str2.text.toString()
-            )
         }
 
-        binding.actionReset.setOnClickListener {
-            binding.str1.text = null
-            binding.str2.text = null
-
-            binding.str1.requestFocus()
-
-        }
+//        binding.actionCompare.setOnClickListener {
+//            this.hideVirtualKkeyboard();
+//            // Obtengo de la UI los valores de los EditText para comparar
+//            mainViewModel.actionCompare(
+//                binding.str1.text.toString(), binding.str2.text.toString()
+//            )
+//        }
 
     }
+
 
     private fun hideVirtualKkeyboard() {
         // TODO relocate this code. Maybe in a service
@@ -58,8 +51,7 @@ class MainActivity : AppCompatActivity() {
         if (view != null) {
             // on below line we are creating a variable
             // for input manager and initializing it.
-            val inputMethodManager =
-                getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+            val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
             // on below line hiding our keyboard.
             inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0)
         }

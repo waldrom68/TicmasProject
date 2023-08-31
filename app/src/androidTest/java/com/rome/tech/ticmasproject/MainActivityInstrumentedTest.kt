@@ -103,52 +103,52 @@ class MainActivityInstrumentedTest {
         )
     }
 
-    @Test
-    fun mainActivity_clickOn_resetWithData() {
-        // Check only the content of EditTexts
-        val caseList: List<List<String>> = MockTestData().equalsData()
-        Espresso.onView(ViewMatchers.withId(R.id.str1)).perform(
-            ViewActions.click(), typeText(caseList[0][0])
-        );
+//    @Test
+//    fun mainActivity_clickOn_resetWithData() {
+//        // Check only the content of EditTexts
+//        val caseList: List<List<String>> = MockTestData().equalsData()
+//        Espresso.onView(ViewMatchers.withId(R.id.str1)).perform(
+//            ViewActions.click(), typeText(caseList[0][0])
+//        );
+//
+//        Espresso.onView(ViewMatchers.withId(R.id.str2)).perform(
+//            ViewActions.click(), typeText(caseList[0][1])
+//        );
+//
+//        Espresso.onView(ViewMatchers.withId(R.id.actionReset)).perform(
+//            ViewActions.click()
+//        )
+//
+//        Espresso.onView(
+//            ViewMatchers.withId(R.id.str1)
+//        ).check(
+//            ViewAssertions.matches(
+//                ViewMatchers.withText("")
+//            )
+//        )
+//
+//        Espresso.onView(
+//            ViewMatchers.withId(R.id.str2)
+//        ).check(
+//            ViewAssertions.matches(
+//                ViewMatchers.withText("")
+//            )
+//        )
+//    }
 
-        Espresso.onView(ViewMatchers.withId(R.id.str2)).perform(
-            ViewActions.click(), typeText(caseList[0][1])
-        );
-
-        Espresso.onView(ViewMatchers.withId(R.id.actionReset)).perform(
-            ViewActions.click()
-        )
-
-        Espresso.onView(
-            ViewMatchers.withId(R.id.str1)
-        ).check(
-            ViewAssertions.matches(
-                ViewMatchers.withText("")
-            )
-        )
-
-        Espresso.onView(
-            ViewMatchers.withId(R.id.str2)
-        ).check(
-            ViewAssertions.matches(
-                ViewMatchers.withText("")
-            )
-        )
-    }
-
-    @Test
-    fun mainActivity_clickOn_resetWithoutData() {
-        Espresso.onView(ViewMatchers.withId(R.id.actionReset)).perform(
-            ViewActions.click()
-        )
-
-        Espresso.onView(
-            ViewMatchers.withId(R.id.result)
-        ).check(
-            ViewAssertions.matches(
-                ViewMatchers.withText(R.string.resetResult)
-            )
-        )
-    }
+//    @Test
+//    fun mainActivity_clickOn_resetWithoutData() {
+//        Espresso.onView(ViewMatchers.withId(R.id.actionReset)).perform(
+//            ViewActions.click()
+//        )
+//
+//        Espresso.onView(
+//            ViewMatchers.withId(R.id.result)
+//        ).check(
+//            ViewAssertions.matches(
+//                ViewMatchers.withText(R.string.resetResult)
+//            )
+//        )
+//    }
 
 }
