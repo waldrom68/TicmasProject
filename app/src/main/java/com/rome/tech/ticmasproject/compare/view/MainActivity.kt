@@ -32,13 +32,13 @@ class MainActivity : AppCompatActivity() {
             this.hideVirtualKkeyboard();
         }
 
-//        binding.actionCompare.setOnClickListener {
-//            this.hideVirtualKkeyboard();
-//            // Obtengo de la UI los valores de los EditText para comparar
-//            mainViewModel.actionCompare(
-//                binding.str1.text.toString(), binding.str2.text.toString()
-//            )
-//        }
+        binding.actionCompare.setOnClickListener {
+            this.hideVirtualKkeyboard();
+            // Obtengo de la UI los valores de los EditText para comparar
+            mainViewModel.actionCompare(
+                binding.str1.text.toString(), binding.str2.text.toString()
+            )
+        }
 
     }
 
