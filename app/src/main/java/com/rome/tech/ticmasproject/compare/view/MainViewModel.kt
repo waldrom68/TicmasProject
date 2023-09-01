@@ -19,9 +19,9 @@ class MainViewModel : ViewModel() {
         MutableLiveData(ComparisonResult(_result))
 
 
-    private fun updateResult(text: Int) {
+    private fun updateResult(newValue: Int) {
         // The observed attribute is updated
-        _comparisonResult.value = ComparisonResult(text)
+        _comparisonResult.value = ComparisonResult(newValue)
     }
 
     // User interaction.
@@ -43,10 +43,9 @@ class MainViewModel : ViewModel() {
         updateResult(_result)
     }
 
-
-    fun actionReset() {
-        updateResult(result)
-    }
+//    fun actionReset() {
+//        updateResult(result)
+//    }
 
 
 }
