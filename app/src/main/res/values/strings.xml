@@ -2,7 +2,7 @@
     <string name="app_name">Ticmas-Project</string>
 
     <!-- Strings used for form tags -->
-    <string name="tittle">Comparar textos</string>
+    <string name="title">Comparador de textos</string>
     <string name="string1">Ingrese un texto</string>
     <string name="string2">Re-ingrese texto</string>
 
